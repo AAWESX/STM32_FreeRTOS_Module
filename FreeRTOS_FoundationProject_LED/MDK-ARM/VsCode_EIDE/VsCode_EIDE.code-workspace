@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "buzzer_control.h": "c"
+        }
+    },
+    "extensions": {}
+}

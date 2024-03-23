@@ -1,0 +1,12 @@
+freertos_foundationproject\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+freertos_foundationproject\list.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
+freertos_foundationproject\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+freertos_foundationproject\list.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
+freertos_foundationproject\list.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+freertos_foundationproject\list.o: ../Core/Inc/FreeRTOSConfig.h
+freertos_foundationproject\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+freertos_foundationproject\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+freertos_foundationproject\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+freertos_foundationproject\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+freertos_foundationproject\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+freertos_foundationproject\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

@@ -30,6 +30,14 @@ freertos_foundationproject\delay.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1x
 freertos_foundationproject\delay.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 freertos_foundationproject\delay.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 freertos_foundationproject\delay.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+freertos_foundationproject\delay.o: ../HARDWARE/LED\LED_User.h
+freertos_foundationproject\delay.o: ../Core/Inc/main.h
+freertos_foundationproject\delay.o: ../HARDWARE/Buzzer\Buzzer_Control.h
+freertos_foundationproject\delay.o: ../HARDWARE/Music\Buzzer_music.h
+freertos_foundationproject\delay.o: ../XK_HARDWARE/LCD\lcd.h
+freertos_foundationproject\delay.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
+freertos_foundationproject\delay.o: ../XK_HARDWARE/DELAY\delay.h
+freertos_foundationproject\delay.o: ../HARDWARE/Sys_Bit_Control\Bit_Control.h
 freertos_foundationproject\delay.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 freertos_foundationproject\delay.o: ../Core/Inc/FreeRTOSConfig.h
 freertos_foundationproject\delay.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

@@ -25,8 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "LCD\lcd.h"
-#include "DELAY\delay.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

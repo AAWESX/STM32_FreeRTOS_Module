@@ -29,6 +29,14 @@ freertos_foundationproject\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx
 freertos_foundationproject\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 freertos_foundationproject\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 freertos_foundationproject\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+freertos_foundationproject\main.o: ../HARDWARE/LED\LED_User.h
+freertos_foundationproject\main.o: ../Core/Inc/main.h
+freertos_foundationproject\main.o: ../HARDWARE/Buzzer\Buzzer_Control.h
+freertos_foundationproject\main.o: ../HARDWARE/Music\Buzzer_music.h
+freertos_foundationproject\main.o: ../XK_HARDWARE/LCD\lcd.h
+freertos_foundationproject\main.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
+freertos_foundationproject\main.o: ../XK_HARDWARE/DELAY\delay.h
+freertos_foundationproject\main.o: ../HARDWARE/Sys_Bit_Control\Bit_Control.h
 freertos_foundationproject\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 freertos_foundationproject\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 freertos_foundationproject\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
@@ -41,6 +49,3 @@ freertos_foundationproject\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/in
 freertos_foundationproject\main.o: ../Core/Inc/tim.h
 freertos_foundationproject\main.o: ../Core/Inc/gpio.h
 freertos_foundationproject\main.o: ../Core/Inc/fsmc.h
-freertos_foundationproject\main.o: ../XK_HARDWARE/LCD\lcd.h
-freertos_foundationproject\main.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
-freertos_foundationproject\main.o: ../XK_HARDWARE/DELAY\delay.h

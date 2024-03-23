@@ -31,7 +31,12 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "LED\LED_User.h"
+#include "Buzzer\Buzzer_Control.h"
+#include "Music\Buzzer_music.h"
+#include "LCD\lcd.h"
+#include "DELAY\delay.h"
+#include "Sys_Bit_Control\Bit_Control.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

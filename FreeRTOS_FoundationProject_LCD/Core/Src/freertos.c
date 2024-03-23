@@ -25,11 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "LED\LED_User.h"
-#include "Buzzer\Buzzer_Control.h"
-#include "Music\Buzzer_music.h"
-#include "LCD\lcd.h"
-#include "DELAY\delay.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,9 +45,26 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-static StackType_t g_pucStackOfLedTask[64];
-static StaticTask_t g_TCBofLEDTask;
-static TaskHandle_t xLED2TaskHandle;
+
+/* TASK1 任务配置
+ * 包括：任务句柄 任务优先级 堆栈大小 创建任务
+ */
+#define TASK1_PRIO       1
+#define TASK1_STACK_SZIE 128
+TaskHandle_t      xTaskHandle_LED1;
+StackType_t       g_pucStackOfLedTask_1[TASK1_STACK_SZIE];
+StaticTask_t      g_Task_TCP_LED1;
+
+
+/* TASK2 任务配置
+ * 包括：任务句柄 任务优先级 堆栈大小 创建任务
+ */
+#define TASK2_PRIO       2
+#define TASK2_STACK_SZIE 128
+TaskHandle_t      xTaskHandle_LED2;
+StackType_t       g_pucStackOfLedTask_2[TASK2_STACK_SZIE];
+StaticTask_t      g_Task_TCP_LED2;
+
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -77,6 +90,7 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
   */
 void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
+	BaseType_t ret;
 
   /* USER CODE END Init */
 
@@ -100,16 +114,47 @@ void MX_FREERTOS_Init(void) {
   /* creation of defaultTask */
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
-  /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
+  /* USER CODE BEGIN RTOS_T HREADS */
+  	taskENTER_CRITICAL();    /*进入临界区*/
 	
-//	ret = xTaskCreate(LED_test1,"LEDtask1", 64,NULL,osPriorityNormal,&xLEDTaskHandle);
-//	
-//  ret = xTaskCreate(LED_test2,"LEDtask1", 64,NULL,osPriorityNormal,&xLEDTaskHandle);
-	
-  //xLED2TaskHandle = xTaskCreateStatic(LED_test2,"LEDtask2",64,NULL,osPriorityAboveNormal,g_pucStackOfLedTask,&g_TCBofLEDTask);
+  xTaskHandle_LED1 = xTaskCreateStatic( (TaskFunction_t )LED_test1,
+																			  (char *         )"LEDtask1",
+																			  (uint16_t       )TASK1_STACK_SZIE,
+																			  (void *         )NULL,
+																	    	(UBaseType_t    )TASK1_PRIO,
+																			  (StackType_t *  )g_pucStackOfLedTask_1,
+                                        (StaticTask_t * )&g_Task_TCP_LED1);
 
+  xTaskHandle_LED2 = xTaskCreateStatic( (TaskFunction_t )LED_test2,
+																			  (char *         )"LEDtask2",
+																			  (uint16_t       )TASK2_STACK_SZIE,
+																			  (void *         )NULL,
+																	    	(UBaseType_t    )TASK2_PRIO,
+																			  (StackType_t *  )g_pucStackOfLedTask_2,
+                                        (StaticTask_t * )&g_Task_TCP_LED2 );
+
+
+
+	// ret = xTaskCreate(	(TaskFunction_t )LED_test1,
+	// 										(char *         )"LEDtask1",
+	// 										(uint16_t       )TASK1_STACK_SZIE,
+  //                     (void *         )NULL,
+	// 										(UBaseType_t    )TASK1_PRIO,
+	// 										(TaskHandle_t * )&xTaskHandle_LED1);
 	
+  // ret = xTaskCreate( (TaskFunction_t )LED_test2,
+	// 					   			  (char *         )"LEDtask1",
+	// 								  	(uint16_t       )TASK2_STACK_SZIE,
+	// 								    (void *         )NULL,
+	// 							    	(UBaseType_t    )TASK2_PRIO,
+	// 							    	(TaskHandle_t * )&xTaskHandle_LED2);
+
+  // osDelay(10000);
+  vTaskDelete(xTaskHandle_LED1);
+	
+  vTaskDelay(NULL);   /*退出临界*/
+
+  /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */

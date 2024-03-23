@@ -30,7 +30,14 @@ freertos_foundationproject\buzzer_music.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/s
 freertos_foundationproject\buzzer_music.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 freertos_foundationproject\buzzer_music.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 freertos_foundationproject\buzzer_music.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+freertos_foundationproject\buzzer_music.o: ../HARDWARE/LED\LED_User.h
+freertos_foundationproject\buzzer_music.o: ../Core/Inc/main.h
 freertos_foundationproject\buzzer_music.o: ../HARDWARE/Buzzer\Buzzer_Control.h
+freertos_foundationproject\buzzer_music.o: ../HARDWARE/Music\Buzzer_music.h
+freertos_foundationproject\buzzer_music.o: ../XK_HARDWARE/LCD\lcd.h
+freertos_foundationproject\buzzer_music.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
+freertos_foundationproject\buzzer_music.o: ../XK_HARDWARE/DELAY\delay.h
+freertos_foundationproject\buzzer_music.o: ../HARDWARE/Sys_Bit_Control\Bit_Control.h
 freertos_foundationproject\buzzer_music.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 freertos_foundationproject\buzzer_music.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 freertos_foundationproject\buzzer_music.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h

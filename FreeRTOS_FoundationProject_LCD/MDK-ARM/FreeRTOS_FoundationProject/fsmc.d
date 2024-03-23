@@ -30,3 +30,11 @@ freertos_foundationproject\fsmc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx
 freertos_foundationproject\fsmc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 freertos_foundationproject\fsmc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 freertos_foundationproject\fsmc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+freertos_foundationproject\fsmc.o: ../HARDWARE/LED\LED_User.h
+freertos_foundationproject\fsmc.o: ../Core/Inc/main.h
+freertos_foundationproject\fsmc.o: ../HARDWARE/Buzzer\Buzzer_Control.h
+freertos_foundationproject\fsmc.o: ../HARDWARE/Music\Buzzer_music.h
+freertos_foundationproject\fsmc.o: ../XK_HARDWARE/LCD\lcd.h
+freertos_foundationproject\fsmc.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
+freertos_foundationproject\fsmc.o: ../XK_HARDWARE/DELAY\delay.h
+freertos_foundationproject\fsmc.o: ../HARDWARE/Sys_Bit_Control\Bit_Control.h

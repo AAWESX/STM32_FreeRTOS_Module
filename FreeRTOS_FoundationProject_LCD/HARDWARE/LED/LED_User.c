@@ -19,15 +19,13 @@ void LED_Control(GPIO_TypeDef *GPIOx,LED_Pin_Switch LED_Pin, LED_GPIO_STAT  Gpio
 void LED_test1(void)
 {
 
-	
-	osDelay(500);
 
 	while (1)
 	{
 		LED_Control(GPIOB,Pin_5,Pin_LOW);
-		osDelay(1000);
+		osDelay(100);
 		LED_Control(GPIOB,Pin_5,Pin_HIGH);
-		osDelay(1000);
+		osDelay(100);
 	}
 }
 
